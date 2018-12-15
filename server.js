@@ -1,0 +1,7 @@
+import express from 'express';
+const app = express();
+
+import cors from 'cors';
+app.use(cors({optionsSuccessStatus: 200}));
+
+require('dotenv').config();
