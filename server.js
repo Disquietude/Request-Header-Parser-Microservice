@@ -9,14 +9,17 @@ app.use(cors({optionsSuccessStatus: 200}));
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    endpoint: '/api/whoami'
+  });
 });
 
 app.get('/api/whoami', (req, res) => {
   res.json({
-    ipaddress: req.headers.host,
+    ipaddress: req.ip,
     language: req.headers["accept-language"],
     software: req.headers["user-agent"]
   });

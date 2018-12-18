@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro')
+
+$source-sans-pro: 'Source Sans Pro', sans-serif
+$light-grey: hsl(0, 0, 90%)
+  
+body 
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.title
+  text-align: center 
+  font-family: $source-sans-pro
+
+.subtitle
+  font-family: $source-sans-pro
+  &--no-top-margin
+    margin-top: 0
+
+.container
+  background-color: $light-grey
+  text-align: center
+  width: auto
+  padding: 2.5rem
+  border-radius: 15px
+  &__text
+    font-family: $source-sans-pro
+    font-size: 1.2rem
+
+.sample-output
+  font-size: 1.2rem
